@@ -11,4 +11,4 @@ def dame_tirada():
 
 
 tirada=dame_tirada()
-print(tirada)
+print("Su tirada fue:",tirada)
