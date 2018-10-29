@@ -9,3 +9,4 @@ print ("es generala?",JuegosEspeciales.esGeneralAlternativa(generala),generala)
 print ("es generala?",JuegosEspeciales.esGenerala(noGenerala), noGenerala)
 
 print ("es escalera?",juegosalternativos_TFL.esEscalera(noGenerala),noGenerala)
+

@@ -10,5 +10,3 @@ def dame_tirada():
     return tirada
 
 
-tirada=dame_tirada()
-print("Su tirada fue:",tirada)

@@ -33,3 +33,6 @@ def esGeneralAlternativa(tirada):
     #Si la tupla que me devuelve tiene un 5 en
     #su cantidad de veces repetida, la tirada es una generala
     return dado_esta_repetido(tirada[0],tirada)[1]==5
+
+def esPoker(tirada):
+    return dado_esta_repetido(tirada[0],tirada)==4 or dado_esta_repetido(tirada[1],tirada)==4
