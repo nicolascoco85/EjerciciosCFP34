@@ -1,6 +1,7 @@
 import random
+cantidad_limite_jugadores=21
 cantidad_jugadores=int(input('Ingrese el numero de jugadores: '))
-adivinar_numero= random.randrange(0,21)
+adivinar_numero= random.randrange(0,cantidad_limite_jugadores)
 nombre= input('ingrese el nombre de jugador: ')
 numero_elegido= int(input('Ingrese un numero: '))
 lista=[]
