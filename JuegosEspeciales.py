@@ -36,3 +36,9 @@ def esGeneralAlternativa(tirada):
 
 def esPoker(tirada):
     return dado_esta_repetido(tirada[0],tirada)==4 or dado_esta_repetido(tirada[1],tirada)==4
+
+def determinarGeneralaServida(tirada,intento):
+    return esGenerala(tirada) and intento==1
+
+
+
