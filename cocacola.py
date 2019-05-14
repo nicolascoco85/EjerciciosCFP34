@@ -8,7 +8,7 @@ lista=[]
 turnos_jugados=1
 while (numero_elegido!=adivinar_numero)and (cantidad_jugadores!=turnos_jugados):
     lista.append((nombre,abs(adivinar_numero-numero_elegido)))
-    nombre = input('ingrese el nombre de jugador: ')
+    nombre = input('ingrese el nombre de jugador o jugadora: ')
     numero_elegido = int(input('Ingrese un numero: '))
     turnos_jugados+=1
 print('El numero misterioso es: ',adivinar_numero)
