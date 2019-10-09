@@ -1,6 +1,3 @@
-tablero={'1':"X",'2':"X",'3':"O"
-        ,'4':"O",'5':"X",'6':"O"
-        ,'7':"X",'8':"O",'9':"X"}
 def mostrarTablero(tablero):
     for i in range (1,len(tablero)+1):
         print(tablero[str(i)], end="-")
