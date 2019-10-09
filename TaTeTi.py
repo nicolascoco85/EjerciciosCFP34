@@ -35,22 +35,31 @@ def mostrarGanador(i):
         print("gano la O")
     input()
 
+def estaOcupado(tablero,opcion):
+    return tablero[str(opcion)]=="X" or tablero[str(opcion)]=="O"
+
 
 #mostrarTablero(tablero)
 tablero=iniciarlizarTablero()
 mostrarTablero(tablero)
 opcion=input("Ingrese el Numero donde quiere poner la X")[0]
 i=0
-while (hayGanador(tablero)!=True and i<len(tablero)):
+
+
+def pedirOpcion(jugador):
+    return input("Ingrese el Numero donde quiere poner la "+jugador)[0]
+
+def determinarJugador(i):
     if (i%2==0):
-        while(tablero[str(opcion)]=="X" or tablero[str(opcion)]=="O" ):
-            opcion=input("Ingrese el Numero donde quiere poner la X")[0]
-        tablero[str(opcion)]="X"
+        return "X"
     else:
-        while (tablero[str(opcion)]=="X" or tablero[str(opcion)]=="O" ):
-            opcion = input("Ingrese el Numero donde quiere poner la O")[0]
-        tablero[str(opcion)] = "O"
-    i=i+1
+        return "O"
+
+while (hayGanador(tablero)!=True and i<len(tablero)):
+    while estaOcupado(tablero,opcion):
+        opcion= pedirOpcion(determinarJugador(i))
+    tablero[str(opcion)]=determinarJugador(i)
+    i=i+1#Paso de turno
     mostrarTablero(tablero)
 
 mostrarGanador(i)
