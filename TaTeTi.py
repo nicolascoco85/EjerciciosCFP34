@@ -36,13 +36,6 @@ def estaOcupado(tablero,opcion):
     return tablero[str(opcion)]=="X" or tablero[str(opcion)]=="O"
 
 
-#mostrarTablero(tablero)
-tablero=iniciarlizarTablero()
-mostrarTablero(tablero)
-opcion=input("Ingrese el Numero donde quiere poner la X")[0]
-i=0
-
-
 def pedirOpcion(jugador):
     return input("Ingrese el Numero donde quiere poner la "+jugador)[0]
 
@@ -51,6 +44,12 @@ def determinarJugador(i):
         return "X"
     else:
         return "O"
+
+#mostrarTablero(tablero)
+tablero=iniciarlizarTablero()
+mostrarTablero(tablero)
+opcion=input("Ingrese el Numero donde quiere poner la X")[0]
+i=0
 
 while (hayGanador(tablero)!=True and i<len(tablero)):
     while estaOcupado(tablero,opcion):
