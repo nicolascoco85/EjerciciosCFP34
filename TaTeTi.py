@@ -1,7 +1,13 @@
 def mostrarTablero(tablero):
     for i in range (1,len(tablero)+1):
-        print(tablero[str(i)], end="-")
-        if (i%3==0):
+        separador=" "
+
+        if (i % 3 != 0):
+            separador ="-"
+
+        print(tablero[str(i)], end=separador)
+
+        if (i%3==0):#Permite el interlineado
             print("")
 
 def iniciarlizarTablero():
